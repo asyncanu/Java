@@ -1,0 +1,59 @@
+Pattern 10
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scn = new Scanner(System.in);
+	    
+		System.out.println("Enter your no: ");
+		int n = scn.nextInt();
+		System.out.println("no: " + n);
+		
+		System.out.println("Pattern: ");
+		
+		int osp = n/2 ;  //osp = outer space
+		int isp = -1 ;   //isp = inner space
+		
+		for(int i = 1; i <= n; i++){
+		    
+		    for(int j = 1; j <= osp; j++){
+		        System.out.print("\t");
+		    }
+		    
+		    System.out.print("*\t");
+		    
+		    for(int j = 1; j <= isp; j++){
+		        System.out.print("\t");
+		    }
+		    
+		    if(i > 1 && i < n){
+		        System.out.print("*\t");
+		    }
+		    
+		    if(i <= n/2){
+		        osp-- ;
+		        isp += 2 ;
+		    } else {
+		        osp++ ;
+		        isp -= 2 ;
+		    }
+		    
+		    System.out.println();
+		}
+	}
+}
+
+Output:
+
+Enter your no:
+5
+no: 5
+Pattern:
+
+    *
+  *   *
+*       *
+  *   * 
+    * 
+

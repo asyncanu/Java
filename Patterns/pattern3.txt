@@ -1,0 +1,42 @@
+Pattern 3
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scn = new Scanner(System.in);
+	    
+		System.out.println("Enter your number:");
+		int n = scn.nextInt();
+		System.out.println("your number:" + n);
+		
+		int sp = n - 1 ;  //sp = space
+		int star = 1 ;
+		
+		for(int i = 1; i <= n; i++){
+		  //  System.out.println(sp + "," + star);
+		  
+		  for(int j = 1; j <= sp; j++){
+		      System.out.print("\t");
+		  }
+		  
+		  for(int j = 1; j <= star; j++){
+		      System.out.print("*\t");
+		  }
+		    sp-- ;
+		    star++;
+		    System.out.println();
+		}
+	}
+}
+
+Output:
+Enter your number:
+5
+your number: 5
+
+        *
+      * *
+    * * *
+  * * * *
+* * * * *

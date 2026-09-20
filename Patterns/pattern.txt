@@ -1,0 +1,52 @@
+Pattern
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scn = new Scanner(System.in);
+	    
+		System.out.println("Enter no of rows:");
+		int n = scn.nextInt();
+		System.out.println("rows:" + n);
+		
+		if(n > 10){
+		    System.out.println("pattern not found");
+		} else {
+		    System.out.println("Pattern:");
+		    
+		    int m = n;
+		
+		    for(int i = 1; i <= (2*n - 1); i++){
+		        
+		        for(int j = 1; j <= m; j++){
+		            System.out.print(j);
+		        }
+		        
+		        if(i >= n){
+		            m++;
+		        }else{
+		            m--;
+		        }
+		        
+		        System.out.println();
+		    }
+	    }
+	}
+}
+
+Output-
+
+Enter the no of rows:
+4
+no of rows: 4
+
+Pattern:
+
+1 2 3 4
+1 2 3
+1 2
+1
+1 2
+1 2 3
+1 2 3 4

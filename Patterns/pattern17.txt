@@ -1,0 +1,55 @@
+Pattern 17  (Arrow)
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scn = new Scanner(System.in);
+	    
+		System.out.println("Enter the no of rows: ");
+		int n = scn.nextInt();
+		System.out.println("no of rows: " + n);
+		
+        System.out.println("Pattern: ");
+		
+		int sp = n/2;
+		int st = 1;
+		
+		for(int i = 1; i <= n; i++){
+		    
+		    for(int j = 1; j <= sp; j++){
+		        if(i == n/2 + 1){
+		            System.out.print("*\t");
+		        } else {
+		            System.out.print("\t");
+		        }
+		    }
+		    
+		    for(int j = 1; j <= st; j++){
+		        System.out.print("*\t");
+		    }
+		    
+		    if(i <= n/2){
+		        st++;
+		    } else {
+		        st--;
+		    }
+		    
+		    System.out.println();
+		}
+	}
+}
+
+Output -
+
+Enter the no of rows:
+5
+No of rows: 5
+
+Pattern:
+
+    *
+    * *
+* * * * *
+    * *
+    *
