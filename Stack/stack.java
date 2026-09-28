@@ -10,6 +10,13 @@ public class stack{
         System.out.println(st) ;
         st.push(40) ;
         System.out.println(st) ;
-        System.out.println(st.peek() + " " + st.size() ) ;
+        System.out.println(st + " -> " + st.peek() + " " + st.size() ) ;
+        st.pop() ;
+        System.out.println(st + " -> " + st.peek() + " " + st.size() ) ;
+        st.pop() ;
+        System.out.println(st + " -> " + st.peek() + " " + st.size() ) ;
+        st.pop() ;
+        System.out.println(st + " -> " + st.peek() + " " + st.size() ) ;
+
     }
 }
