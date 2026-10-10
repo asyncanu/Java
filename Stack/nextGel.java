@@ -16,7 +16,7 @@ public class nextGel{
         int n = Integer.parseInt(br.readLine() ) ;
         int[] arr = new int[n] ;
         for(int i = 0; i < n; i++){
-            a[i] = Integer.parseInt(br.readLine()) ;
+            arr[i] = Integer.parseInt(br.readLine()) ;
         }
         int[] nge = solve(arr) ;
         display(nge) ;
