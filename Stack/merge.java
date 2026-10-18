@@ -5,14 +5,14 @@ public class merge{
 
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in) ;
-        System.out.println("Enter the no of elements: ") ;
+        System.out.println("Enter the no of intervals: ") ;
         int n = scn.nextInt() ;
-        
+
         int[][] arr = new int[n][2] ;
-        for(int j = 0; j < n; j++){
-            String line = scn.next() ;
-            arr[j][0] = Integer.parseInt(line.split(",")[0]) ;
-            arr[j][1] = Integer.parseInt(line.split(",")[1]) ;
+        for(int j = 0; j < n; j++){                   
+            String line = scn.next() ;                              // // Reading each interval
+            arr[j][0] = Integer.parseInt(line.split(",")[0]) ;      // line.split(",") splits the string at the comma into two strings
+            arr[j][1] = Integer.parseInt(line.split(",")[1]) ;      // Integer.parseInt() converts each string into an integer.
         }
         mergeIntervals(arr) ;
     }
@@ -50,8 +50,8 @@ public class merge{
     }
 
     public static class Pair implements Comparable<Pair>{
-        int st ;                  // start time 
-        int et ;                  // end time
+        int st ;                  // start time of interval
+        int et ;                  // end time of interval
         Pair(int st, int et){
             this.st = st ;
             this.et = et ;
@@ -68,5 +68,8 @@ public class merge{
                 return this.et - other.et ;
             }
         }
+        // compareTo() method says:
+        // 1. If the start values differ, sort by start value in ascending order.
+        // 2. If the start values are equal, sort by end value in ascending order.
     }   
 }
